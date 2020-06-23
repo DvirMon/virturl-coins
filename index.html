@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-widthdevice-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Jquery AJAX - Crypto API</title>
+
+  <!-- css files -->
+  <link rel="stylesheet" href="/extra/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/card.css" />
+  <link rel="stylesheet" href="/css/switch.css" />
+  <link rel="stylesheet" href="/css/search.css" />
+  <link rel="stylesheet" href="/css/charts.css" />
+  <link rel="stylesheet" href="/css/about.css" />
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+    
+  <!-- jquery, bootstrap and canvasJs scrip files -->
+  <script src="/extra/jquery-3.4.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="/extra/bootstrap.js"></script>
+  <script src="/extra/canvasjs.min.js"></script>
+  <script src="/extra/jquery.canvasjs.min.js"></script>
+
+  <!-- my script files -->
+  <script src="/js/main.js"></script>
+  <script src="/js/asist.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/search.js"></script>
+  <script src="/js/collapse.js"></script>
+  <script src="/js/toggle.js"></script>
+  <script src="/js/charts.js"></script>
+  <script src="/js/about.js"></script>
+</head>
+
+<body>
+
+  <!-- Cover page -->
+  <header class="header">
+    <div class="caption">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <h1>Cryptocurrency</h1>
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <h2>Explore the world of Cryptocurrency</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <h5>Full Stack Web Developer jQuery-AJAX API Project</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end of cover page -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="content"></p>
+        </div>
+        <div class="modal-footer">
+          <input type="button" class="btn btn-secondary btn-modal" data-dismiss="modal" value=""></input>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of modal -->
+
+  <!-- Spinner -->
+  <div id="spinner">
+  </div>
+  <!-- end of spinner -->
+
+  <!-- Main content -->
+  <main class="main">
+    <!-- Navbar -->
+    <div class="navbar-sticky row nav-row">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+            aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form class="form-inline my-sm-0">
+        </div>
+        <div class="navbar-collapse col-xl-6 col-lg-6 col-md-6 col-sm-6" id="navbarToggle">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" active="true" id="home">
+              <i class="fas fa-home"></i> Home</a>
+            <a class="nav-item nav-link" id="about">
+              <i class="fas fa-info-circle"></i> About</a>
+            <a class="nav-item nav-link" id="liveReports"><i class="far fa-chart-bar"></i>Live Reports</a>
+            <a class="nav-link text-white">Selected Coins :</a>
+            <a class="navbar-text" id="selectedCoins" active="off"></a>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+          <span id="search-error" class="text-white mr-3 "></span>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">
+          <input class="form-control mr-3" id="search-input" placeholder="Search Coin..." autocomplete="off" />
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">
+          <input type="button" value="Find Coin" class="btn btn-outline-primary mr-2 my-2 my-sm-0" id="btn-search">
+        </div>
+        </form>
+      </nav>
+    </div>
+    <!-- end of Navbar -->
+
+    <!-- button to delete all the selected coin -->
+    <button type="button" class="btn text-white ml-2" id="deleteCoins-button">Delete <br>Selected <br>Coins</button>
+    <!-- end of button -->
+
+    <!-- main container for content -->
+    <div class="container">
+      <div class="row row-main">
+      </div>
+    </div>
+    <!-- end of main container for content -->
+  </main>
+  <!-- end of main content -->
+
+  <!-- button to return the top of the page-->
+  <button id="scrollTop-button"> Back To <br> Top</button>
+  <!-- end of button -->
+
+  <footer>
+    <div class="footer dark bg-dark">
+      Copyrights &copy;
+    </div>
+  </footer>
+
+</body>
+
+</html>

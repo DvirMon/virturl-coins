@@ -1,0 +1,16 @@
+/* css file for charts  */
+#chartContainer {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    top: 2vh;
+}
+
+#coinsWithoutInfo {
+    position: relative;
+    top: 71vh;
+    color: white;
+    background-color: black;
+    opacity: 0.8;
+    z-index: 1;
+}

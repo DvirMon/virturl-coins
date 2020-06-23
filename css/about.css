@@ -1,0 +1,53 @@
+
+#about-text {
+    position: relative;
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+    height: 83vh;
+    width: 100%;
+    padding-left: 30px;
+}
+
+#about-text > #aboutMe > ul {
+    position: relative;
+    right: 6vh;
+    list-style-type: none
+    
+}
+#aboutMe > ul > li {
+    margin-bottom: 10px;
+}
+
+#aboutMe > h3, #aboutTheProject > h3 {
+    text-decoration: underline;
+} 
+
+#about-text > #aboutTheProject > ul {
+    list-style-type: none
+}
+
+#aboutMe {
+    position: relative;
+    opacity: 1;
+}
+
+#aboutTheProject {
+    position: relative;
+    bottom: 57vh;
+    opacity: 1;
+}
+
+#profileImage  {
+    position: relative;
+    bottom: 15vh;
+    left: 63%;
+    width: auto;
+    z-index: 300;
+}
+
+#profileImage > img {
+    width: 350px;
+    height: 300px;
+
+}

@@ -1,0 +1,55 @@
+/* card style */
+
+.card {
+  box-sizing: border-box;
+}
+
+.card-coin {
+  opacity: 0.95;
+  border: 0px;
+  background-color: transparent;
+  display: table;
+  z-index: 0;
+}
+
+.card-coin > .card-body {
+  border-radius: 25px;
+  background-color: #71c9db;
+  border: 0px;
+  margin-left: 10px;
+}
+
+.btn-info {
+  opacity: 1;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.card-img {
+  margin-left: 5px;
+}
+
+/* modal card style */
+
+.modal-backdrop {
+  background-color: transparent;
+}
+
+.card-modal {
+  width: 90px;
+  background-color: #71c9db;
+  border: 0px;
+  box-sizing: border-box;
+}
+
+.card-modal > .card-body {
+  padding: 0px;
+  text-align: center;
+  position: relative;
+  top: 10%;
+}
+
+.row-modal  {
+  position: relative;
+  top: 2vh;
+}
